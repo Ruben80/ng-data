@@ -1,6 +1,6 @@
 export const products = [
 	{
-		name: 'Nike Air Max 2000 NG',
+		name: 'Nike Air Max 2000 ng',
 		price: 249,
 		description: 'The best ones ever!'
 	},

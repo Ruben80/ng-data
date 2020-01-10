@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -10,27 +11,30 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 import { CartService } from './cart.service';
-
 import { CartComponent } from './cart.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
 	imports: [
 		BrowserModule,
+		HttpClientModule,
 		ReactiveFormsModule,
 		RouterModule.forRoot([
 			{ path: '', component: ProductListComponent },
 			{ path: 'products/:productId', component: ProductDetailComponent },
-			{ path: 'cart', component: CartComponent }
+			{ path: 'cart', component: CartComponent },
+			{ path: 'shipping', component: ShippingComponent }
 		])
 	],
 
 	declarations: [
-		CartComponent,
+		ShippingComponent,
 		AppComponent,
 		TopBarComponent,
 		ProductListComponent,
 		ProductAlertsComponent,
-		ProductDetailComponent
+		ProductDetailComponent,
+		CartComponent
 	],
 	bootstrap: [ AppComponent ]
 })
